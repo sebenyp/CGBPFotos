@@ -1,0 +1,445 @@
+﻿@font-face {
+    font-family: 'CenturyGothicRegular';
+    src: url('../fonts/CenturyGothicRegular.ttf') format('truetype');
+}
+
+@media screen and ( max-width: 500px ) {
+    /* Introduction image */
+    .introduction_image {
+        float: left;
+        margin-right: 10px;
+        width: 35%;
+        border-radius: 5px;
+        /*box-shadow: rgba(0,0,0,0.1) 3px 3px;*/
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    }
+}
+
+/* Xs screens */
+@media screen and ( min-width: 501px ) and ( max-width: 767px ) {
+    /* Introduction image */
+    .introduction_image {
+        float: left;
+        margin-right: 10px;
+        width: 25%;
+        border-radius: 10px;
+        /*box-shadow: rgba(0,0,0,0.1) 4px 4px;*/
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    }
+}
+
+/* Above xs screens */
+@media screen and ( min-width: 768px ) {
+    /* Introduction image */
+    .introduction_image {
+        /*float: left;
+        margin-right: 10px;
+        width: 20%;
+        border-radius: 20px;*/
+
+        /* Ha Neked ez így jobb? Nagy képernyőn azért elgondolkoznék, hogy tényleg jobb-e így. Kis képernyőn nem is így csináltam. */
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        width: 20%;
+
+        /*box-shadow: rgba(0,0,0,0.1) 5px 5px;*/
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Introduction padding extra */
+    .introduction_padding {
+        padding: 0px 10%;
+    }
+}
+
+/* Small screen mode */
+@media screen and ( max-width: 991px ) {
+    .navbar {
+        z-index: 1;
+    }
+
+    /* Form items widths */
+    #name, #email, #message {
+        width: 100%;
+    }
+
+    /* Introduction, Connections top padding */
+    p {
+        margin-top: 70px;
+    }
+
+    .tab-pane {
+        /* Felső menüsor vastagságával együtt kell változtatni */
+        padding-top: 60px;
+    }
+
+    .skipScript {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    nav {
+        border: none;
+    }
+}
+
+/* Big screen mode */
+@media screen and ( min-width: 992px ) {
+    .menuItem {
+        width: 100%;
+    }
+
+    /* Form items widths */
+    #name, #email, #message {
+        width: 80%;
+    }
+
+    /* Introduction, Connections top padding */
+    p {
+        margin-top: 20px;
+    }
+
+    .fixed {
+        float: left;
+    }
+
+    #menucollapse {
+        padding: 0;
+    }
+
+    /* navbar | maybe change this for element, instead of class */
+    .skipScript {
+        position: fixed;
+        float: left;
+        /* Navbar width */
+        /* Oldalmenü szélességének beállítása */
+        width: 230px; /* needs for the longest text keep in one line */
+        /* Navbar border color */
+        /* Menü keret színe */
+        border-color: aqua; /* just for see if have, because i dont want it */
+        /* Navbar border rounding */
+        /* Menü sarkainak lekerekítése */
+        border-radius: 0px;
+        /* Navbar border thickness */
+        /* Menü keret vastagsága */
+        border-width: 0px;
+        /* Navbar formatting */
+        border-radius: 3px;
+        margin-top: 20px;
+        margin-left: 20px;
+        /*box-shadow: rgba(0,0,0,0.1) 5px 5px;*/
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        font-family: 'CenturyGothicRegular';
+    }
+
+    .span8 {
+        /* Oldalmenü szélességével együtt kell állítani //250: 230 + 20 margin + 10 for fun */
+        margin-left: 260px;
+    }
+}
+/* Big screen mode */
+
+/* Common settings */
+
+/* Sticky footer */
+/* Ragadós lábléc */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* For footer */
+    margin-bottom: 20px;
+    /* Page background */
+    /* Oldal hátterének színe */
+    background-color: #dcccbc;
+    
+    /* Háttérkép */
+    background-image: url("../bpef_hatter.jpg");
+    background-size: cover;
+
+    /* Text font */
+    font-family: 'CenturyGothicRegular';
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px; /* 60px */
+    /* Footer background color */
+    /* Lábléc hátterének színe */
+    background-color: #1e1e1f;
+    /* Footer text color */
+    /* Lábléc szövegének színe */
+    color: #bbbbbd;
+}
+
+.footertext {
+    margin: 0;
+}
+/* Sticky footer end */
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel {
+    max-height: inherit;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Carouser slider Arrow */
+.myCarouselControl .glyphicon {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+    /* Carouser slider Arrow size */
+    /* Kép lapozó navigációs nyíl ikonjainak mérete */
+    font-size: 30px;
+    /* Carouser slider Arrow color */
+    /* Kép lapozó navigációs nyíl ikonjainak színe */
+    color: white;
+    text-shadow: 0px 0px 10px #000;
+}
+
+.left .glyphicon {
+    left: 50%;
+    margin-left: -10px;
+}
+
+.right .glyphicon {
+    right: 50%;
+    margin-right: -10px;
+}
+
+/* On carousel-control hover change the color of the arrows */
+/* Képlapozó vezérlői fölé vitt egér esetén változzanak a nyilak színei */
+.carousel-control:hover > .glyphicon {
+    color: white;
+}
+
+.navbar {
+    /* Menu bar background color */
+    /* Menü háttérszíne */
+    background-color: #7e92b3;
+}
+
+#menucollapse > ul > li.active a {
+    /* Active menu item */
+    /* Kiválasztott menüelem színei */
+    background-color: #7e92b3;
+    color: #f2ece6;
+}
+
+    #menucollapse > ul > li.active a:hover {
+        /* Active menu item hover */
+        /* Kiválasztott menüelem színei, ha felette van az egér */
+        background-color: #7e92b3;
+        color: white;
+    }
+
+#menucollapse > ul > li a {
+    /* Not active menu items */
+    /* Menü elemek színei */
+    background-color: #7e92b3;
+    color: #f2ece6;
+}
+
+    #menucollapse > ul > li a:hover {
+        /* Not active menu items */
+        /* Menü elemek színei, ha felette van az egér */
+        background-color: #7e92b3;
+        color: white;
+    }
+.dropdown-menu {
+    background-color: #7e92b3;
+}
+
+#menuButton {
+    padding-right: 30px;
+    padding-top: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+    #menuButton:hover {
+        padding-right: 30px;
+        padding-top: 10px;
+        font-size: 30px;
+        color: white;
+        text-decoration-style: none;
+    }
+
+.carousel-inner img {
+    margin: auto;
+}
+
+/* Introduction, Connections text */
+p {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000;
+}
+
+/* Input elements color */
+input#name.form-control,
+input#email.form-control,
+textarea#message.form-control,
+button#sendBtn.form-control.btn-block,
+button#resetBtn.form-control.btn-block {
+    background-color: #1e1e1f;
+    color: white;
+    border-color: #dcccbc;
+    resize: none;
+}
+
+.constantBtnWidth {
+    width: 200px;
+}
+
+/* Gallery styles */
+#imgViewContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 9999;
+}
+
+#imageViewer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 2%;
+}
+/* End of gallery viewer */
+
+@media screen and ( min-width: 768px ) {
+    .thumbnail_container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .thumbnail {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+        /*background-color: #dcccbc;*/
+        /*border-color: #dcccbc;*/
+    }
+
+    .img-thumbnail {
+        background-color: #dcccbc;
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and ( max-width: 767px ) {
+    .thumbnail {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        /*background-color: #dcccbc;*/
+        /*border-color: #dcccbc;*/
+    }
+
+    .img-thumbnail {
+        background-color: #dcccbc;
+        padding: 0;
+        border: none;
+        max-height: 400px;
+    }
+
+    #imageViewer {
+        padding: 0;
+    }
+}
+
+.imagesComment {
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#imageViewerLeftButton {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    color: white;
+    font-size: 30px;
+    box-shadow: none;
+    text-shadow: 0px 0px 6px #000;
+}
+
+#imageViewerRightButton {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    color: white;
+    font-size: 30px;
+    box-shadow: none;
+    text-shadow: 0px 0px 6px #000;
+}
+
+#imageViewerCloseButton {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 30px;
+    box-shadow: none;
+    text-shadow: 0px 0px 6px #000;
+}
+
+.thumbnail img {
+    /*box-shadow: 3px 3px 8px rgba(0,0,0,0.1);*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);/*???better???*/
+}
+
+.thumbnail_container {
+    background-color: rgba(0,0,0,0);
+}
+
+.thumbnail {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
