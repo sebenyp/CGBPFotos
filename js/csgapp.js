@@ -31,13 +31,14 @@ function doOnNext(type) {
     } else {
         element = $(".carousel-inner .prev img");
     }
-    setAll(element);
+    setAll(element);//kell ez ide???
 }
 
 function doOnScreenChange() {
     $("#imgViewContainer").height(window.innerHeight);
 
     if (window.innerWidth < 992) {
+        $("#galleriesButton").attr("data-toggle", "dropdown");
         $("#menuButton").show();
         $(".menuItem").each(function () {
             var aaa = $(this).children("a");
@@ -45,6 +46,7 @@ function doOnScreenChange() {
             aaa.addClass("pull-right");
         });
     } else {
+        $("#galleriesButton").attr("data-toggle", "");
         $("#menuButton").hide();
         $(".menuItem").each(function () {
             var aaa = $(this).children("a");
@@ -52,6 +54,7 @@ function doOnScreenChange() {
             aaa.addClass("pull-left");
         });
     }
+    $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
 }
 
 // Gallery functions starts here

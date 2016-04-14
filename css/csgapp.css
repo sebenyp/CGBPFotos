@@ -10,8 +10,8 @@
         margin-right: 10px;
         width: 35%;
         border-radius: 5px;
-        /*box-shadow: rgba(0,0,0,0.1) 3px 3px;*/
         box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        margin-top: 70px;
     }
 }
 
@@ -23,8 +23,8 @@
         margin-right: 10px;
         width: 25%;
         border-radius: 10px;
-        /*box-shadow: rgba(0,0,0,0.1) 4px 4px;*/
         box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        margin-top: 70px;
     }
 }
 
@@ -32,31 +32,62 @@
 @media screen and ( min-width: 768px ) {
     /* Introduction image */
     .introduction_image {
-        /*float: left;
-        margin-right: 10px;
-        width: 20%;
-        border-radius: 20px;*/
-
-        /* Ha Neked ez így jobb? Nagy képernyőn azért elgondolkoznék, hogy tényleg jobb-e így. Kis képernyőn nem is így csináltam. */
         position: fixed;
         bottom: 40px;
         right: 20px;
         width: 20%;
-
-        /*box-shadow: rgba(0,0,0,0.1) 5px 5px;*/
-        box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        width: auto;
+        max-height: 250px;
     }
 
     /* Introduction padding extra */
     .introduction_padding {
         padding: 0px 10%;
     }
+
+    .welcomeText {
+        position: fixed;
+        bottom: 40px;
+        left: 0px;
+        right: 0px;
+    }
+}
+
+.navbar {
+    /* Menu bar background color */
+    /* Menü háttérszíne */
+    background-color:  rgba(126,146,179,0.75); /*#7e92b3*/
+}
+
+#menucollapse > ul > li.active a:hover {
+    /* Active menu item hover */
+    /* Kiválasztott menüelem színei, ha felette van az egér */
+    background-color: rgba(126,146,179,0.5);
+    color: white;
+}
+
+#menucollapse > ul > li a:hover {
+    /* Not active menu items */
+    /* Menü elemek színei, ha felette van az egér */
+    background-color: rgba(126,146,179,0.5);
+    color: white;
 }
 
 /* Small screen mode */
 @media screen and ( max-width: 991px ) {
     .navbar {
         z-index: 1;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: absolute;
+        top: 50px;
+        right: 300px;
+    }
+
+    .submenuItem {
     }
 
     /* Form items widths */
@@ -86,13 +117,59 @@
     nav {
         border: none;
     }
+
+    .navbar {
+        /* Menu bar background color in small screens */
+        /* Menü háttérszíne in small screens */
+        background-color: rgba(126,146,179,0.95); /*#7e92b3*/
+    }
+
+
+
+    #menucollapse > ul > li.active a:hover {
+        /* Active menu item */
+        /* Kiválasztott menüelem színei */
+        background-color: rgba(126,146,179,0);
+        color: #f2ece6;
+    }
+
+    #menucollapse > ul > li a:hover {
+        /* Not active menu items */
+        /* Menü elemek színei */
+        background-color: rgba(126,146,179,0);
+        color: #f2ece6;
+    }
 }
 
 /* Big screen mode */
 @media screen and ( min-width: 992px ) {
+    /* home page */
+    .welcomeText {
+        left: 4%;
+    }
+
+    .dropdown-menu {
+        min-width: 170px;
+    }
+
     .menuItem {
         width: 100%;
     }
+
+    .menuItem > a > div {
+        padding-left: 0px;
+    }
+
+    .menuItem > a {
+        padding-left: 8px;
+    }
+
+    .dropdown-menu > li > a {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    /* end of home page */
 
     /* Form items widths */
     #name, #email, #message {
@@ -118,7 +195,7 @@
         float: left;
         /* Navbar width */
         /* Oldalmenü szélességének beállítása */
-        width: 230px; /* needs for the longest text keep in one line */
+        width: 150px; /* needs for the longest text keep in one line */
         /* Navbar border color */
         /* Menü keret színe */
         border-color: aqua; /* just for see if have, because i dont want it */
@@ -139,7 +216,7 @@
 
     .span8 {
         /* Oldalmenü szélességével együtt kell állítani //250: 230 + 20 margin + 10 for fun */
-        margin-left: 260px;
+        margin-left: 180px;
     }
 }
 /* Big screen mode */
@@ -235,41 +312,22 @@ body {
     color: white;
 }
 
-.navbar {
-    /* Menu bar background color */
-    /* Menü háttérszíne */
-    background-color: #7e92b3;
-}
-
 #menucollapse > ul > li.active a {
     /* Active menu item */
     /* Kiválasztott menüelem színei */
-    background-color: #7e92b3;
+    background-color: rgba(126,146,179,0);
     color: #f2ece6;
 }
-
-    #menucollapse > ul > li.active a:hover {
-        /* Active menu item hover */
-        /* Kiválasztott menüelem színei, ha felette van az egér */
-        background-color: #7e92b3;
-        color: white;
-    }
 
 #menucollapse > ul > li a {
     /* Not active menu items */
     /* Menü elemek színei */
-    background-color: #7e92b3;
+    background-color: rgba(126,146,179,0);
     color: #f2ece6;
 }
 
-    #menucollapse > ul > li a:hover {
-        /* Not active menu items */
-        /* Menü elemek színei, ha felette van az egér */
-        background-color: #7e92b3;
-        color: white;
-    }
 .dropdown-menu {
-    background-color: #7e92b3;
+    background-color: rgba(126,146,179,0.85);
 }
 
 #menuButton {
@@ -292,10 +350,11 @@ body {
 }
 
 /* Introduction, Connections text */
-p {
+.ptext {
     color: white;
     text-align: center;
-    text-shadow: 0px 0px 5px #000;
+    text-shadow: 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000, 0px 0px 6px #000, 0px 0px 7px #000;
+    font-size: 17px;
 }
 
 /* Input elements color */
@@ -442,4 +501,49 @@ button#resetBtn.form-control.btn-block {
 .thumbnail {
     background-color: rgba(0,0,0,0);
     border-color: rgba(0,0,0,0);
+}
+
+.dropdown-menu {
+    transform: translate(169px, -51px);
+    max-width: 250px;
+}
+
+nav {
+    z-index: 9998;
+}
+ 
+ul {
+    width: 100%;
+}
+ 
+ul li {
+    width: 100%;
+}
+ 
+
+
+/* Small screen mode */
+@media screen and ( max-width: 991px ) {
+    ul > li > a {
+        width: 100%;
+        text-align: right;
+    }
+}
+
+/* Big screen mode */
+@media screen and ( min-width: 992px ) {
+
+    ul > li > a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* itt tartottam, az almenü bal oldali hézagját kéne csökkenteni */
+    .dropdown-menu a {
+        padding: 0px 3px;
+    }
 }
